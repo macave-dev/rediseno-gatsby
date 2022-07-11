@@ -10,9 +10,10 @@ const Header = ({}) => {
     const [isSticky, setSticky] = useState(false);
     const ref = useRef(null);
 
-    const urlSubMenu = 'https://eventosyfestivales.com/wp-json/wp-macave/v1/primary';
+    const urlSubMenu = 'https://seunonoticias.net/wp-json/wp-macave/v1/primary';
     const [infoSubMenu,setInfoSubMenu] = useState([])
 
+    console.log(infoSubMenu)
 
     const setStickyHeader = () => {
         if ( ref.current ) {
