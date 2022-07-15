@@ -51,9 +51,16 @@ const HomePageContent = () => {
         <Suspense fallback = {null}>
             <Section7/>
         </Suspense>
-        <Section8/>
-        <Section9/>
-        <Section10/>
+        <Suspense fallback = {null}>
+          <Section8/>
+        </Suspense>
+        <Suspense fallback = {null}>
+            <Section9/>
+        </Suspense>
+        <Suspense fallback = {null}>
+          <Section10/>
+        </Suspense>
+        
     </div>
   )
 }
