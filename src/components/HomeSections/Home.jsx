@@ -45,11 +45,12 @@ const HomePageContent = () => {
         <Suspense fallback = {null}>
           <Section5/>
         </Suspense>
-
-        
-        
-        <Section6/> 
-        <Section7/>
+        <Suspense fallback = {null}>
+          <Section6/> 
+        </Suspense>
+        <Suspense fallback = {null}>
+            <Section7/>
+        </Suspense>
         <Section8/>
         <Section9/>
         <Section10/>
