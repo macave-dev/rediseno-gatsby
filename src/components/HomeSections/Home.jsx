@@ -29,6 +29,9 @@ const HomePageContent = () => {
 
   return (
     <div>
+      <Suspense fallback={null}>
+        <Section1/>
+      </Suspense>
 
         <Suspense fallback = {<h1>Cargando...</h1>}>
           <Section2 props = {dataHome}/>

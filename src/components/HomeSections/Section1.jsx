@@ -6,12 +6,11 @@ import styled from 'styled-components';
 const Section1 = ({props}) => {
 
 
-  const [dataHome,setDataHome] = useState({})
+  const [dataHome,setDataHome] = useState()
   const fetchApiHome = async() => {
     const response = await fetch('https://seunonoticias.net/wp-json/wp-macave/v1/home')
     const responseJSON = await response.json()
     setDataHome(responseJSON)
-    console.log(responseJSON)
   }
 
   useEffect(() =>{
@@ -38,7 +37,7 @@ const Section1 = ({props}) => {
         if ( ref.current ) {
             let cardElement = e.target.closest('.card__description'),
                 urlToGo = cardElement.querySelector('.button__general--go-to').getAttribute('data-url');
-
+               
         }
     }
 
@@ -129,7 +128,7 @@ const Section1 = ({props}) => {
                     {(() => {
                         if ( dataHome.URLSection ) {
                             return(
-                                <Link link ={dataHome.URLSection}> 
+                                <Link to ={dataHome.URLSection}> 
                                     <GoToIcon></GoToIcon>
                                     <span>Ver todas</span>
                                 </Link>
