@@ -1,4 +1,5 @@
 import React, {useState,useEffect,Suspense,lazy} from 'react'
+import YoutubeVideo from './YoutubeVideo'
 
 const Section1 = lazy(() => import('./Section1'))
 const Section2 = lazy(() => import('./Section2'))
@@ -28,16 +29,22 @@ const HomePageContent = () => {
 
   return (
     <div>
-        {/* <Suspense fallback = {<h1>Cargando...</h1>}>
-          <Section1 props = {dataHome}/>
-        </Suspense> */}
+
         <Suspense fallback = {<h1>Cargando...</h1>}>
           <Section2 props = {dataHome}/>
         </Suspense>
+        <Suspense fallback = {null}>
+          <Section4/>
+        </Suspense>
+        <Suspense fallback = {null}>
+          <YoutubeVideo/>
+        </Suspense>
+        <Suspense fallback = {null}>
+          <Section5/>
+        </Suspense>
+
         
-        <Section3/>
-        <Section4/>
-        <Section5/>
+        
         <Section6/> 
         <Section7/>
         <Section8/>
