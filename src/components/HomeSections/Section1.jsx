@@ -5,20 +5,35 @@ import styled from 'styled-components';
 
 const Section1 = ({props}) => {
 
-  const [hasDataLoaded,setSelectedCard] = useState();
 
+  const [dataHome,setDataHome] = useState({})
+  const fetchApiHome = async() => {
+    const response = await fetch('https://seunonoticias.net/wp-json/wp-macave/v1/home')
+    const responseJSON = await response.json()
+    setDataHome(responseJSON)
+    console.log(responseJSON)
+  }
+
+  useEffect(() =>{
+    fetchApiHome()
+  },[])
+
+
+
+
+  const [hasDataLoaded,setSelectedCard] = useState();
   const [isActiveCard, setActiveCard] = useState();
   const ref = useRef();
 
 
   useEffect(() => {
-      if ( props && !hasDataLoaded ) {
+      if ( dataHome && !hasDataLoaded ) {
           setInitialCard(); 
           return () => {
               document.querySelector('.link-button-element').removeEventListener('click', () => goToPost);
           }
       };
-  })
+  },[])
     const goToPost = (e) => { 
         if ( ref.current ) {
             let cardElement = e.target.closest('.card__description'),
@@ -107,14 +122,14 @@ const Section1 = ({props}) => {
     
     return(
         <div className='cover__section section' data-type="default" >
-            { !props ? '':
+            { !dataHome ? '':
                 <div className='section__header'>
-                    <h3>{props.titleSection}</h3>
+                    <h3>{dataHome.titleSection}</h3>
                 <div>
                     {(() => {
-                        if ( props.URLSection ) {
+                        if ( dataHome.URLSection ) {
                             return(
-                                <Link link ={props.URLSection}> 
+                                <Link link ={dataHome.URLSection}> 
                                     <GoToIcon></GoToIcon>
                                     <span>Ver todas</span>
                                 </Link>
@@ -125,8 +140,8 @@ const Section1 = ({props}) => {
             </div>
             }
             <Items className='cover__wrap'>
-                { !props ? '':
-                    props.info.map((element,index) => {
+                { !dataHome ? '':
+                    dataHome.info.map((element,index) => {
                         
                         return (
                             <a key = {element.url} id = {'el-'+element.id} className="active" onMouseEnter={toggleHover('el-'+element.id,index)} data-id={element.id}>
