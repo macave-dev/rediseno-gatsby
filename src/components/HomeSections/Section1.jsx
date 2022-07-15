@@ -140,7 +140,7 @@ const Section1 = ({props}) => {
             </div>
             }
             <Items className='cover__wrap'>
-                { !dataHome ? '':
+                { !dataHome ? null:
                     dataHome.info.map((element,index) => {
                         
                         return (
