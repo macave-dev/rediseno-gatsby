@@ -13,8 +13,6 @@ const Header = ({}) => {
     const urlSubMenu = 'https://seunonoticias.net/wp-json/wp-macave/v1/primary';
     const [infoSubMenu,setInfoSubMenu] = useState([])
 
-    console.log(infoSubMenu)
-
     const setStickyHeader = () => {
         if ( ref.current ) {
             setSticky(ref.current.getBoundingClientRect().top <= -32);
