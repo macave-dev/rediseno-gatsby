@@ -1,9 +1,10 @@
-import React, {useState,useEffect,Suspense,lazy} from 'react'
+import React, {Suspense,lazy} from 'react'
 import YoutubeVideo from './YoutubeVideo'
+import Loading from '../Loading'
 
 const Section1 = lazy(() => import('./Section1'))
 const Section2 = lazy(() => import('./Section2'))
-const Section3 = lazy(() => import('./Section3'))
+// const Section3 = lazy(() => import('./Section3'))
 const Section4 = lazy(() => import('./Section4'))
 const Section5 = lazy(() => import('./Section5'))
 const Section6 = lazy(() => import('./Section6'))
@@ -15,26 +16,15 @@ const Section10 = lazy(() => import('./Section10'))
 
 const HomePageContent = () => {
 
-  const [dataHome,setDataHome] = useState({})
-  const fetchApiHome = async() => {
-    const response = await fetch('https://eventosyfestivales.com/wp-json/wp-macave/v1/home')
-    const responseJSON = await response.json()
-    setDataHome(responseJSON)
-  }
-
-  useEffect(() =>{
-    fetchApiHome()
-  },[])
-
 
   return (
     <div>
-      <Suspense fallback={null}>
+     
+      <Suspense fallback={ <Loading/>}>
         <Section1/>
       </Suspense>
-
-        <Suspense fallback = {<h1>Cargando...</h1>}>
-          <Section2 props = {dataHome}/>
+        <Suspense fallback = {null}>
+          <Section2/>
         </Suspense>
         <Suspense fallback = {null}>
           <Section4/>
@@ -60,7 +50,6 @@ const HomePageContent = () => {
         <Suspense fallback = {null}>
           <Section10/>
         </Suspense>
-        
     </div>
   )
 }

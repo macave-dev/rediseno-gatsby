@@ -2,7 +2,6 @@ import React, {useEffect,useState, useRef} from 'react';
 import {Link} from 'gatsby'
 import GoToIcon from '../../svg/goToIcon';
 import styled from 'styled-components';
-
 const Section1 = ({props}) => {
 
 
