@@ -10,18 +10,19 @@ import Layout from "../components/Layout"
 export default function Home() {
 
 
-  const url = 'https://seunonoticias.net/wp-json/wp-macave/v1/schema';
+  const url = 'https://eventosyfestivales.com/wp-json/wp-macave/v1/schema';
   const [information,setInformation] = useState()
   const fetchApi = async() => {
       const response = await fetch(url);
       const responseJSON = await response.json();
       setInformation(responseJSON);
-      
   }
 
   useEffect(() => {
     fetchApi();
   },[])
+
+  console.log(information)
 
 
 
@@ -48,8 +49,8 @@ export default function Home() {
                 }`
              }</script>
             }
-            {!information ? null: <link data-rh="true" rel="shortcut icon" href={information.SiteIcon}/>}
-            {!information ? null: <link data-rh="true" rel="icon" href={information.SiteIcon} type="image/x-icon"/>}
+            {!information ? null: <link data-rh="true" rel="shortcut icon" href={information.Logo}/>}
+            {!information ? null: <link data-rh="true" rel="icon" href={information.Logo} type="image/x-icon"/>}
             
 
             {/* ADSENSE */}
