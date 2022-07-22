@@ -1,6 +1,6 @@
 import React, {useEffect,useState, useRef} from 'react';
 import {Link} from 'gatsby'
-import GoToIcon from '../svg/goToIcon';
+import GoToIcon from '../../svg/goToIcon';
 import styled from 'styled-components';
 
 const Section1 = ({props}) => {
@@ -8,7 +8,7 @@ const Section1 = ({props}) => {
 
   const [dataHome,setDataHome] = useState()
   const fetchApiHome = async() => {
-    const response = await fetch('https://seunonoticias.net/wp-json/wp-macave/v1/home')
+    const response = await fetch('https://eventosyfestivales.com/wp-json/wp-macave/v1/home')
     const responseJSON = await response.json()
     setDataHome(responseJSON)
   }

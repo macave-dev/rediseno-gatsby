@@ -1,14 +1,14 @@
 import React,{useEffect,useState} from 'react'
 import { Link } from 'gatsby'
 import dayjs from 'dayjs'
-import GoToIcon from '../svg/goToIcon'
+import GoToIcon from '../../svg/goToIcon';
 import styled from 'styled-components'
-import Go_to_icon from '../assets/Go_to_icon.svg'
+import Go_to_icon from '../../assets/Go_to_icon.svg'
 
 const Section2 = ({props}) => {
 
 
-  const url = 'https://seunonoticias.net/wp-json/wp-macave/v1/home'
+  const url = 'https://eventosyfestivales.com/wp-json/wp-macave/v1/home'
     
     const [information,setInformation] = useState()
     const fetchApi = async() => {

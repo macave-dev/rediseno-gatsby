@@ -2,11 +2,11 @@ import React, {useEffect,useState} from 'react';
 import { Link } from 'gatsby';
 import dayjs from 'dayjs'
 import styled from 'styled-components';
-import GoToIcon from '../svg/goToIcon';
+import GoToIcon from '../../svg/goToIcon';
 
 const Section10 = () => {
 
-  const url = 'https://seunonoticias.net/wp-json/wp-macave/v1/home'
+  const url = 'https://eventosyfestivales.com/wp-json/wp-macave/v1/home'
     const [information,setInformation] = useState()
     const fetchApi = async() => {
         const response = await fetch(url)

@@ -1,20 +1,18 @@
 import React, {useState,useEffect} from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import FbIcon from '../svg/fbIcon';
+import FbIcon from '../../svg/fbIcon';
 import Logo from '../header/Logo';
-import YtIcon from '../svg/ytIcon';
-import InstagramIcon from '../svg/instagramIcon';
-import TwitterIcon from '../svg/twitterIcon';
+import YtIcon from '../../svg/ytIcon';
+import InstagramIcon from '../../svg/instagramIcon';
+import TwitterIcon from '../../svg/twitterIcon';
 
 const FooterFirstPart = ({props}) => {
 
-
   return (
     <FooterFirst>
-
             <div>
-                <Logo></Logo>
+                <Logo/>
             </div>
 
             {

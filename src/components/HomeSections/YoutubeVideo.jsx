@@ -1,12 +1,12 @@
 import React, {useState,useEffect} from 'react';
-import GoToIcon from '../svg/goToIcon';
+import GoToIcon from '../../svg/goToIcon';
 import { Link } from '@reach/router';
 import styled from 'styled-components';
 import HeaderSection from '../HeaderSection';
 
 const YoutubeVideo = () => {
 
-    const url = 'https://seunonoticias.net/wp-json/wp-macave/v1/home'
+    const url = 'https://eventosyfestivales.com/wp-json/wp-macave/v1/home'
     const [information,setInformation] = useState({})
     const fetchApi = async() => {
         const response = await fetch(url);

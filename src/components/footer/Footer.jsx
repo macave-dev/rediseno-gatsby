@@ -8,8 +8,8 @@ import styled from 'styled-components'
 
 const Footer = ({state}) => {
 
-    const url_Schema = 'https://seunonoticias.net/wp-json/wp-macave/v1/schema';
-    const url_Footer = 'https://seunonoticias.net/wp-json/wp-macave/v1/footer';
+    const url_Schema = 'https://eventosyfestivales.com/wp-json/wp-macave/v1/schema';
+    const url_Footer = 'https://eventosyfestivales.com/wp-json/wp-macave/v1/footer';
 
 
     const [infoSchema,setInfoSchema] = useState([]);

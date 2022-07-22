@@ -17,7 +17,7 @@ const HomePageContent = () => {
 
   const [dataHome,setDataHome] = useState({})
   const fetchApiHome = async() => {
-    const response = await fetch('https://seunonoticias.net/wp-json/wp-macave/v1/home')
+    const response = await fetch('https://eventosyfestivales.com/wp-json/wp-macave/v1/home')
     const responseJSON = await response.json()
     setDataHome(responseJSON)
   }

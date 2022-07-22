@@ -1,12 +1,12 @@
 import React, {useEffect,useState} from 'react';
 import {Link} from 'gatsby';
 import dayjs from 'dayjs'
-import GoToIcon from '../svg/goToIcon'
+import GoToIcon from '../../svg/goToIcon'
 import styled from 'styled-components';
 
 const Section8 = () => {
 
-  const url = 'https://seunonoticias.net/wp-json/wp-macave/v1/home'
+  const url = 'https://eventosyfestivales.com/wp-json/wp-macave/v1/home'
     const [information,setInformation] = useState()
     const fetchApi = async() => {
         const response = await fetch(url)

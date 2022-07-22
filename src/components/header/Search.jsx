@@ -1,5 +1,5 @@
 import React, { useState, useRef,useEffect } from 'react';
-import SearchIcon from '../svg/searchIcon'
+import SearchIcon from '../../svg/searchIcon'
 import styled from 'styled-components';
 
 const Search = ({}) => {
