@@ -49,10 +49,8 @@ export default function Home() {
                 }`
              }</script>
             }
-            {!information ? null: <link data-rh="true" rel="shortcut icon" href={information.Logo}/>}
-            {!information ? null: <link data-rh="true" rel="icon" href={information.Logo} type="image/x-icon"/>}
-            
-
+           
+          
             {/* ADSENSE */}
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1507048971343506" crossorigin="anonymous"></script>
             {/* OPTAD */}
@@ -61,15 +59,16 @@ export default function Home() {
             
 
             {!information ? '': <meta data-rh="true" name="description" content={information.Description}/> }
-                {!information ? '': <meta data-rh="true" property="fb:pages" content={information.FacebookPages}/> }
-                {!information ? '': <meta data-rh="true" property="fb:app_id" content={information.FacebookId}/>}
-                <meta data-rh="true" property="og:type" content="article"/>
-                {!information ? '': <meta data-rh="true" property="og:title" content={information.Name}/>}
-                {!information ? '': <meta data-rh="true" property="og:site_name" content={information.Name}/>}
-                {!information ? '': <meta data-rh="true" property="og:image" content={information.SiteImage}/>}
-                {!information ? '': <meta data-rh="true" property="og:description" content={information.Description}/>}
-                {!information ? '': <title data-rh="true">{information.Name} | {information.Description}</title>}
-    
+            {!information ? '': <meta data-rh="true" property="fb:pages" content={information.FacebookPages}/> }
+            {!information ? '': <meta data-rh="true" property="fb:app_id" content={information.FacebookId}/>}
+            <meta data-rh="true" property="og:type" content="article"/>
+            {!information ? '': <meta data-rh="true" property="og:title" content={information.Name}/>}
+            {!information ? '': <meta data-rh="true" property="og:site_name" content={information.Name}/>}
+            {!information ? '': <meta data-rh="true" property="og:image" content={information.SiteImage}/>}
+            {!information ? '': <meta data-rh="true" property="og:description" content={information.Description}/>}
+            {!information ? '': <title data-rh="true">{information.Name} | {information.Description}</title>}
+            {!information ? null: <link data-rh="true" rel="shortcut icon" href={information.Logo}/>}
+            {!information ? null: <link data-rh="true" rel="icon" href={information.Logo} type="image/x-icon"/>}
     
     
     <Header />
